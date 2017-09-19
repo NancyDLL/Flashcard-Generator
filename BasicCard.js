@@ -13,10 +13,21 @@ function BasicCard(front, back){
 };
 
 var question1 = new BasicCard("What Kansas City park, at 1,805 acres, is more than twice the size of Central Park in New York City?","Swope Park");
-console.log(question1);
+//console.log(question1);
 
 var question2 = new BasicCard("What largest maker of boxed chocolate in the world, has been based in KC since 1932?","Russell Stover");
-console.log(question2);
+//console.log(question2);
 
 var question3 = new BasicCard("What famous animator opened his first studio, Laugh-O-Gram Studios, in Kansas City?","Walt Disney");
-console.log(question3);
+//console.log(question3);
+
+inquirer.prompt([
+	{
+	type: "input",
+	name: "question1",
+	message: BasicCard.question1.front
+	}
+]).then(function(userAnswer) {
+	console.log(userAnswer);
+}
+});
