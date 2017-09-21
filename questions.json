@@ -2,33 +2,33 @@
 	"queryList":[
 		{
 			"basicFront": "What Kansas City park, at 1,805 acres, is more than twice the size of Central Park in New York City?",
-			"basicBack":"Swope Park",
-			"clozeFront":"Swope Park, at 1,805 acres, is more than twice the size of Central Park in New York City.",
-			"clozeBack":"Swope Park"
-		}
+			"basicBack": "Swope Park",
+			"clozeFront": "Swope Park, at 1,805 acres, is more than twice the size of Central Park in New York City.",
+			"clozeBack": "Swope Park"
+		},
 		{
-			"basicFront":
-			"basicBack":
-			"clozeFront":
-			"clozeBack":
-		}
+			"basicFront": "What largest maker of boxed chocolate in the world, has been based in KC since 1932?",
+			"basicBack": "Russell Stover",
+			"clozeFront": "Russell Stover,the largest maker of boxed chocolate in the world, has been based in KC since 1932.",
+			"clozeBack": "Russell Stover"
+		},
 		{
-			"basicFront":
-			"basicBack":
-			"clozeFront":
-			"clozeBack":
-		}
+			"basicFront": "What famous animator opened his first studio, Laugh-O-Gram Studios, in Kansas City?",
+			"basicBack": "Walt Disney",
+			"clozeFront": "Walt Disney opened his first studio, Laugh-O-Gram Studios, in Kansas City.",
+			"clozeBack": "Walt Disney"
+		},
 		{
-			"basicFront":
-			"basicBack":
-			"clozeFront":
-			"clozeBack":
-		}
+			"basicFront": "What largest greeting card maker in the world began in KC in 1910?",
+			"basicBack": "Hallmark",
+			"clozeFront": "Hallmark, the largest greeting card maker in the world, began in KC in 1910.",
+			"clozeBack": "Hallmark"
+		},
 		{
-			"basicFront":
-			"basicBack":
-			"clozeFront":
-			"clozeBack":
+			"basicFront": "Modeled after Seville, Spain, what was the nation’s first outdoor shopping district that opened in 1922?",
+			"basicBack": "Country Club Plaza",
+			"clozeFront": "Modeled after Seville, Spain, the Country Club Plaza opened in 1922 as the nation’s first outdoor shopping district.",
+			"clozeBack": "Country Club Plaza"
 		}
 	]
 }
