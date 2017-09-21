@@ -18,6 +18,13 @@ function ClozeCard (clozeFront, clozeBack){
 	if (this instanceof ClozeCard){
 		this.clozeFront = clozeFront;
 		this.clozeBack = clozeBack;
+		this.partialText = function(){
+			if(this.clozeFront.includes(this.clozeBack)){
+				return this.fullText.replace(this.clozeBack, "____________");
+			}else{
+				console.log("An error has occured.")
+			}
+		};
 	} else {
 		return new ClozeCard (clozeFront, clozeBack);
 	}
