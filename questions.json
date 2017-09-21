@@ -1,0 +1,34 @@
+{
+	"queryList":[
+		{
+			"basicFront": "What Kansas City park, at 1,805 acres, is more than twice the size of Central Park in New York City?",
+			"basicBack":"Swope Park",
+			"clozeFront":"Swope Park, at 1,805 acres, is more than twice the size of Central Park in New York City.",
+			"clozeBack":"Swope Park"
+		}
+		{
+			"basicFront":
+			"basicBack":
+			"clozeFront":
+			"clozeBack":
+		}
+		{
+			"basicFront":
+			"basicBack":
+			"clozeFront":
+			"clozeBack":
+		}
+		{
+			"basicFront":
+			"basicBack":
+			"clozeFront":
+			"clozeBack":
+		}
+		{
+			"basicFront":
+			"basicBack":
+			"clozeFront":
+			"clozeBack":
+		}
+	]
+}

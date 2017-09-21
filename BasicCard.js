@@ -1,6 +1,10 @@
-//the inquirer module will be required
+//the inquirer module will be required to be able to ask the questions.
 var inquirer = require('inquirer');
 
+//the question file will be required
+var questions = require("./questions.json");
+
+// will the user selecet basic or cloze first from node? I beleive that I need a process argv statement for basic or cloze.
 //This file should define a Node module that exports a constructor for creating basic flashcards, e.g.:
 module.exports = BasicCard;
 
@@ -21,18 +25,19 @@ var question2 = new BasicCard("What largest maker of boxed chocolate in the worl
 var question3 = new BasicCard("What famous animator opened his first studio, Laugh-O-Gram Studios, in Kansas City?","Walt Disney");
 //console.log(question3);
 
-//the function to ask questions and get responses
-function askQuestion() {
-	inquirer.prompt([
-		{
+//prompt to ask questions and get responses
+inquirer.prompt([
+	{
 		type: "input",
 		name: "question1",
 		message: BasicCard.question1.front
-		}
+	}
 	]).then(function(userAnswer) {
 		console.log(userAnswer);
-	})
-};
+});
 
-// trigger the function to start the game
-askQuestion();
+//Questions:
+//Is it better to use JSON(require) or JS(export) for question file? 
+//I do not understand what the module.export does?
+// do the questions need to held in a separate file?
+
