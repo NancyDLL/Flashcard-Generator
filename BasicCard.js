@@ -57,6 +57,7 @@ if(process.argv[2] === "basic"){
 //Questions:
 //Is it better to use JSON(require) or JS(export) for question file? 
 //Which file will be called with node?
+//Why does package-lock exist?
 //Does order of functions matter?
 //Should I count wins and losses? Instructions did not say to.
 //why didn't you select the type of prompt?
