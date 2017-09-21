@@ -5,19 +5,20 @@ var inquirer = require('inquirer');
 var questions = require("./questions.json");
 
 //the basic file will be required if game selected is basic
-var basic = require("./BasicCard.json");
+var basic = require("./BasicCard.js");
 
 //initialize integer variable for queryList
 var i = 0;
 
 //This file should define a Node module that exports a constructor for creating cloze flashcards, e.g.:
-module.exports = ClozeCard;
+module.exports = runCloze;
 
 //The constructor needed for front and back of the cloze card.
 function ClozeCard (clozeFront, clozeBack){
 	if (this instanceof ClozeCard){
 		this.clozeFront = clozeFront;
 		this.clozeBack = clozeBack;
+		//cloze differs from basic in that it substitutes text with underscores.
 		this.partialText = function(){
 			if(this.clozeFront.includes(this.clozeBack)){
 				return this.fullText.replace(this.clozeBack, "____________");

@@ -5,14 +5,14 @@ var inquirer = require('inquirer');
 var questions = require("./questions.json");
 
 //the cloze file will be required if game selected is cloze
-var cloze = require("./ClozeCard.json");
+var cloze = require("./ClozeCard.js");
 
 //initialize integer variable for queryList
 var i = 0;
 
 
 //This file should define a Node module that exports a constructor for creating basic flashcards, e.g.:
-module.exports = BasicCard;
+module.exports = runBasic;
 
 //The constructor needed for front and back of the basic card.
 function BasicCard (basicFront, basicBack){
@@ -24,7 +24,7 @@ function BasicCard (basicFront, basicBack){
 	}
 };
 
-//when user types in node the game function starts
+//when user types in "node basiccard basic" the game function starts
 if(process.argv[2] === "basic"){
 	runBasic();
 	}
@@ -48,21 +48,13 @@ if(process.argv[2] === "basic"){
 			}
 			//if condition to keep asking questions until all the way through the list
 			if(i<questions.queryList.length -1) {
-				i+=1;
+				i++;
 				runBasic();
 			}
-		});
+		})
 	}
+	//runBasic();
 
-//Questions:
-//how do I update my package.json file?
-//Is it better to use JSON(require) or JS(export) for question file? 
-//Which file will be called with node?
-//Why does package-lock exist?
-//Does order of functions matter?
-//Should I count wins and losses? Instructions did not say to.
-//why didn't you select the type of prompt?
-//What does the module.export do, and why is it somethimes at the top of the file and sometimes the bottom?
-//Why do you export the function and not the file?
+
 
 
