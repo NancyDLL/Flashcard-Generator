@@ -62,5 +62,6 @@ if(process.argv[2] === "basic"){
 //Should I count wins and losses? Instructions did not say to.
 //why didn't you select the type of prompt?
 //What does the module.export do, and why is it somethimes at the top of the file and sometimes the bottom?
+//Why do you export the function and not the file?
 
 
