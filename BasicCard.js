@@ -55,6 +55,7 @@ if(process.argv[2] === "basic"){
 	}
 
 //Questions:
+//how do I update my package.json file?
 //Is it better to use JSON(require) or JS(export) for question file? 
 //Which file will be called with node?
 //Why does package-lock exist?

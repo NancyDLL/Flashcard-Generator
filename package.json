@@ -1,7 +1,7 @@
 {
   "name": "flashcard-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "json file for dependent modules",
   "main": "BasicCard.js",
   "dependencies": {
     "inquirer": "^3.3.0"
@@ -14,10 +14,13 @@
     "type": "git",
     "url": "git+https://github.com/NancyDLL/Flashcard-Generator.git"
   },
-  "author": "",
+  "author": "nan loyd-leffingwel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NancyDLL/Flashcard-Generator/issues"
   },
-  "homepage": "https://github.com/NancyDLL/Flashcard-Generator#readme"
+  "homepage": "https://github.com/NancyDLL/Flashcard-Generator#readme",
+  "keywords": [
+    "inquirer"
+  ]
 }
