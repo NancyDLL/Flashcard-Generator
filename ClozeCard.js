@@ -24,8 +24,6 @@ function ClozeCard(clozeFront, clozeBack) {
 	this.clozedQuestion = function() {
 		if (clozeFront.includes(clozeBack)) {
 			return clozeFront.replace(clozeBack, "____________");
-			console.log(clozedQuestion);
-			console.log("--------------------");
 		} else {
 			console.log("An error has occured.");
 			console.log("--------------------");
@@ -54,7 +52,7 @@ function runCloze() {
 			{
 				type: "input",
 				name: "userAnswer",
-				message: questionToAsk.clozeFront
+				message: questionToAsk.clozedQuestion
 			}
 			//evaluate the responses entered by the user
 		])
