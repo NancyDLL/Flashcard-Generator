@@ -1,5 +1,5 @@
 //the inquirer module will be required to be able to ask the questions.
-var inquirer = require('inquirer');
+var inquirer = require("inquirer");
 
 //the question file will be required
 var questions = require("./questions.json");
@@ -14,49 +14,59 @@ var i = 0;
 module.exports = runCloze;
 
 //The constructor needed for front and back of the cloze card.
-function ClozeCard (clozeFront, clozeBack){
-	if (this instanceof ClozeCard){
+function ClozeCard(clozeFront, clozeBack) {
+	if (this instanceof ClozeCard) {
 		this.clozeFront = clozeFront;
 		this.clozeBack = clozeBack;
-		//cloze differs from basic in that it substitutes text with underscores.
-		this.partialText = function(){
-			if(this.clozeFront.includes(this.clozeBack)){
-				return this.fullText.replace(this.clozeBack, "____________");
-			}else{
-				console.log("An error has occured.")
-			}
-		};
 	} else {
-		return new ClozeCard (clozeFront, clozeBack);
+		return new ClozeCard(clozeFront, clozeBack);
 	}
-};
+	this.clozedQuestion = function() {
+		if (clozeFront.includes(clozeBack)) {
+			return clozeFront.replace(clozeBack, "____________");
+			console.log(clozedQuestion);
+			console.log("--------------------");
+		} else {
+			console.log("An error has occured.");
+			console.log("--------------------");
+		}
+	};
+}
 
 //when user types in node the game function starts
-if(process.argv[2] === "cloze"){
+if (process.argv[2] === "cloze") {
 	runCloze();
-	}
-	//function for running the actual cloze game
-	function runCloze(){
-		//set variable for card selection
-		var questionToAsk = new ClozeCard(questions.queryList[i].clozeFront, questions.queryList[i].clozeBack);
-		//prompt to ask questions and get responses
-		inquirer.prompt([
+}
+//function for running the actual cloze game
+function runCloze() {
+	//set variable for card selection
+	var questionToAsk = new ClozeCard(
+		questions.queryList[i].clozeFront,
+		questions.queryList[i].clozeBack
+	);
+	//prompt to ask questions and get responses
+	inquirer
+		.prompt([
 			{
 				type: "input",
 				name: "userAnswer",
 				message: questionToAsk.clozeFront
 			}
-		//evaluate the responses entered by the user
-		]).then(function(response) {
-			if(response.userAnswer === questionToAsk.clozeBack){
+			//evaluate the responses entered by the user
+		])
+		.then(function(response) {
+			if (response.userAnswer === questionToAsk.clozeBack) {
 				console.log("Correct answer.");
 			} else {
-				console.log("Incorrect answer. The correct answer is " + questionToAsk.clozeBack);
+				console.log(
+					"Incorrect answer. The correct answer is " +
+						questionToAsk.clozeBack
+				);
 			}
 			//if condition to keep asking questions until all the way through the list
-			if(i<questions.queryList.length -1) {
-				i+=1;
+			if (i < questions.queryList.length - 1) {
+				i++;
 				runCloze();
 			}
 		});
-	}
+}
