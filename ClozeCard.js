@@ -33,7 +33,11 @@ function ClozeCard(clozeFront, clozeBack) {
 	};
 }
 
-//when user types in node the game function starts
+// * * * * * * * * //
+//user must enter "node ClozeCard cloze" to trigger the runCloze game function
+//user could also enter "node ClozeCard basic" to trigger the runBasic game function
+// * * * * * * * * //
+
 if (process.argv[2] === "cloze") {
 	runCloze();
 }
@@ -57,11 +61,13 @@ function runCloze() {
 		.then(function(response) {
 			if (response.userAnswer === questionToAsk.clozeBack) {
 				console.log("Correct answer.");
+				console.log("--------------------");
 			} else {
 				console.log(
 					"Incorrect answer. The correct answer is " +
-						questionToAsk.clozeBack
+						questionToAsk.clozeBack + "."
 				);
+				console.log("--------------------");
 			}
 			//if condition to keep asking questions until all the way through the list
 			if (i < questions.queryList.length - 1) {

@@ -23,7 +23,11 @@ function BasicCard(basicFront, basicBack) {
 	}
 }
 
-//when user types in "node basiccard basic" the game function starts
+// * * * * * * * * //
+//user must enter "node BasicCard basic" to trigger the runBasic game function
+//user could also enter "node BasicCard cloze" to trigger the runCloze game function
+// * * * * * * * * //
+
 if (process.argv[2] === "basic") {
 	runBasic();
 }
@@ -51,7 +55,7 @@ function runBasic() {
 			} else {
 				console.log(
 					"Incorrect answer. The correct answer is " +
-						questionToAsk.basicBack
+						questionToAsk.basicBack + "."
 				);
 				console.log("--------------------");
 			}
